@@ -1,4 +1,15 @@
-if(process.env.NODE_ENV != 'production'){
+mongoose.connect(process.env.CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology:true});
+
+const connection = mongoose.connection;
+connection.on('error', () =>{
+  console.log('Error connection to database');
+});
+
+connection.once('open', () =>{
+  console.log('Connectado a la base de datos Mongodb Atlas...');
+});
+
+/*if(process.env.NODE_ENV != 'production'){
     require('dotenv').config();
 };
 
@@ -18,6 +29,6 @@ let db = mongoose.connection;
 
 db.once('open', ()=>{
     console.log('Conectado a Mongo Atlas')
-})
+})*/
 
 module.exports = mongoose;
