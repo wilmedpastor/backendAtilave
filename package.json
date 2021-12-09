@@ -4,11 +4,8 @@
   "description": "Esta es una descripcion del proyecto",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
-    "start": "cross-env NODE_ENV=production node src/index.js",
-    "postinstall": "npm run build",
-    "build": "cross-env NODE_ENV=production webpack",
-    "server:dev": "webpack-dev-server"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "William Medina",
   "license": "MIT",

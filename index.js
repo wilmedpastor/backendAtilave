@@ -5,6 +5,6 @@ if(process.env.NODE_ENV != 'production'){
 const app = require('./server');
 require('./database');
 
-app.listen(process.env.PORT || 3000,()=>{
+app.listen(process.env.PORT || 3001,()=>{
     console.log('Servidor Corriendo')
 });
