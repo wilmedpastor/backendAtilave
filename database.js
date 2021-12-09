@@ -1,4 +1,6 @@
-mongoose.connect(process.env.CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology:true});
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.DB_URI, {useNewUrlParser: true, useUnifiedTopology:true});
 
 const connection = mongoose.connection;
 connection.on('error', () =>{
