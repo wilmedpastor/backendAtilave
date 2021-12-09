@@ -8,7 +8,7 @@ const Login = require('./src/routes/login.route');
 
 //middlewares
 app.use(bodyParser.json());
-
+/*
 app.use((req, res, next) => {
     //Dominio que tengan accesso
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
     //Encabezados que se permiten
     res.setHeader('Access-Control-Allow-Headers', '*');
     next();
-})
+})*/
 app.use(cors());
 //Rutas
 app.use('/login',Login);
